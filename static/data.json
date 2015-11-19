@@ -1,0 +1,62 @@
+[
+  {
+    "id": 0,
+    "name": "Example Project A",
+    "description": "This is a sample project",
+    "roadmap": {
+      "name":"Sample Roadmap 1",
+      "steps": [
+        {
+          "name": "Step 1",
+          "explanation": "Do some things"
+        },
+        {
+          "name": "Step 2",
+          "explanation": "Do some other things"
+        },
+        {
+          "name": "Step 3",
+          "explanation": "Get some help to do this thing"
+        },
+        {
+          "name": "Step 4",
+          "explanation": "Celebrate!"
+        }
+      ]
+    },
+    "owner": {
+      "username": "BryceYork",
+      "email": "byork@fusionlabs.com.au"
+    }
+  },
+  {
+    "id": 1,
+    "name": "Example Project B",
+    "description": "This is a different project",
+    "roadmap": {
+      "name":"Sample Roadmap 1",
+      "steps": [
+        {
+          "name": "Step 1",
+          "explanation": "Do some things"
+        },
+        {
+          "name": "Step 2",
+          "explanation": "Do some other things"
+        },
+        {
+          "name": "Step 3",
+          "explanation": "Get some help to do this thing"
+        },
+        {
+          "name": "Step 4",
+          "explanation": "Celebrate!"
+        }
+      ]
+    },
+    "owner": {
+      "username": "Admin",
+      "email": "admin@fusionlabs.com.au"
+    }
+  }
+]

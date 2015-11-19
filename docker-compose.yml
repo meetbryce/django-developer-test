@@ -1,0 +1,13 @@
+#
+# Local Database using Docker
+# To build and start the docker container just run `docker-compose up`
+# NB: web server is accessible at the DOCKER_HOST ip found in output of `docker-machine env default` on port 8080
+#
+
+web:
+  build: .
+  command: python manage.py runserver 0.0.0.0:8080
+  volumes:
+    - .:/code
+  ports:
+    - "8080:8080"

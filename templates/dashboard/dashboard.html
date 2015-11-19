@@ -1,0 +1,52 @@
+{% load static %}
+
+<html ng-app="devTestApp">
+<head>
+  <title>Developer Test - Django</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/material-fullpalette.min.css">
+</head>
+<body>
+  <div class="navbar navbar-default">
+    <div class="container">
+      <span class="navbar-brand">Developer Test - Django</span>
+    </div>
+  </div>
+
+  <div class="container" ng-controller="MainController">
+    <div class="col-md-6" ng-repeat="project in projects" ng-if="!projects.error">
+      <div class="panel panel-primary">
+        <div class="panel-heading"><strong ng-bind="project.name"></strong></div>
+        <div class="panel-body">
+          <ul>
+            <li><strong>Description:</strong> <span ng-bind="project.description">This is a sample project</span></li>
+            <li><strong>Roadmap:</strong> <span ng-bind="project.roadmap.name">Sample Roadmap 1</span>
+              <ul>
+                <li><strong>Steps:</strong>
+                  <ul>
+                    <li ng-repeat="step in project.roadmap.steps"><strong ng-bind="step.name">Step 1:</strong> <span ng-bind="step.explanation">Do some things</span></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><strong>Owner:</strong> <a ng-href="mailto:{$ project.owner.email $}" ng-bind="project.owner.username"></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12">
+      <div class="panel" ng-class="{ 'panel-default': !projects.error, 'panel-danger': projects.error }">
+        <div class="panel-heading"><strong>GET request result:<pre ng-class="{ 'text-danger': projects.error }">/api/projects</pre></strong></div>
+        <div class="panel-body">
+          <pre ng-class="{ 'text-danger': projects.error }"><code ng-bind="projects | json"></code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular-sanitize.min.js"></script>
+  <script src="{% static 'app.js' %}"></script>
+</body>
+</html>
