@@ -13,11 +13,11 @@ Superuser username `admin`, password `admin`.
 
 
 ##Requirements
-We would like you to create some functionality within the roadmap app.
+We would like you to build out the model and api for the roadmap app.
 
 We would like to have 3 models: Projects, Roadmaps, and Steps.
 
-We would like to have the information stored in the system available via a get request at an API.
+We would like to have the information stored in the database available via a GET request at an API enpoint, specifically `/api/projects`.
 
 ###API
 - The API should be made using [Django Rest Framework](http://www.django-rest-framework.org/)
