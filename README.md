@@ -76,7 +76,7 @@ Once the API is setup, it will render a simple HTML representation of the data w
           - Step 2: Do some other things
           - Step 3: Get some help to do this thing
           - Step 4: Celebrate!
-  - **Owner:** [BryceYork](mailto:byork@fusionlabs.com.au)
+  - **Owner:** [Admin](mailto:admin@fusionlabs.com.au)
 
 ### JSON
 **Full length available in static/data.json**
